@@ -18,8 +18,11 @@
     "typescript": "^5.6.2"
   },
   "scripts": {
-    "stryker": "stryker run",
-    "jest-test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "test": "npm run jest-test && npm run stryker"
+    "stryker": "cross-env stryker run",
+    "jest-test": "cross-env node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test": "cross-env npm run jest-test && npm run stryker"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
   }
 }
